@@ -205,3 +205,4 @@ Este proyecto es de uso educativo.
 - OpenCV por el procesamiento de video
 - SciPy por las herramientas de procesamiento de señales
 
+
