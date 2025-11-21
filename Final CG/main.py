@@ -2,7 +2,7 @@
 Space Invaders con Control por Visión
 Proyecto Final - Computación Gráfica 2025-2
 
-Autor: Estudiante
+Autores: Lina María Calvo Castro - Juan Manuel Diaz Torres
 Tecnología: Python + Pygame + MediaPipe + OpenCV
 """
 
@@ -24,4 +24,5 @@ def main():
     game.run()
 
 if __name__ == "__main__":
+
     main()
