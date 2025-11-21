@@ -1,5 +1,5 @@
 """
-game.py - Lógica principal del juego Space Invaders (reescritura total)
+game.py - Lógica principal del juego Space Invaders 
 
 """
 import pygame
@@ -68,7 +68,7 @@ class Game:
         self.hud_font = pygame.font.Font(None, 32)
         self.small_font = pygame.font.Font(None, 20)
 
-        # Detector de manos (opcional)
+        # Detector de manos
         if HandDetector:
             try:
                 self.hand_detector = HandDetector()
@@ -79,7 +79,7 @@ class Game:
             self.hand_detector = None
             print("hand_detector.py no encontrado: control por teclado habilitado.")
 
-        # Sonidos (opcional)
+        # Sonidos 
         if SoundGenerator:
             try:
                 self.sound_generator = SoundGenerator()
@@ -89,7 +89,7 @@ class Game:
         else:
             self.sound_generator = None
 
-        # Inicializar sonidos (pueden ser None)
+        # Inicializar sonidos
         self._create_sounds()
 
         # Manager de power-ups
@@ -110,7 +110,7 @@ class Game:
         self.last_enemy_shot_time = 0
         self.prev_hand_closed = False
 
-        # Música de fondo (puede ser None)
+        # Música de fondo 
         self.background_music = None
         self.music_playing = False
 
@@ -118,10 +118,10 @@ class Game:
         self.start_background_music()
 
     # -----------------------
-    # Sonidos / audio
+    # Sonidos 
     # -----------------------
     def _create_sounds(self):
-        """Crea o carga sonidos usando SoundGenerator si está disponible."""
+        
         self.shoot_sound = None
         self.explosion_sound = None
         self.hit_sound = None
@@ -315,7 +315,7 @@ class Game:
                 # player.update puede no existir; ignorar si falla
                 pass
 
-        # Detección de manos (si existe)
+        # Detección de manos (si aplica)
         hand_x = 0.5
         hand_closed = False
         if self.hand_detector:
@@ -541,7 +541,7 @@ class Game:
                 pass
 
     # -----------------------
-    # Disparo del jugador (gestionando doble disparo)
+    # Disparo del jugador 
     # -----------------------
     def _player_shoot_by_input(self):
         """Crea balas según estado (doble disparo si está activo)"""
@@ -824,3 +824,4 @@ class Game:
 if __name__ == "__main__":
     g = Game()
     g.run()
+
